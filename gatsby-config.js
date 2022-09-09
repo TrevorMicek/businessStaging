@@ -5,7 +5,7 @@ module.exports = {
     author: 'Trevor Micek',
   },
   plugins: [
-  
+
         'gatsby-plugin-postcss',
         {
       resolve: `gatsby-plugin-google-gtag`,
@@ -16,7 +16,7 @@ module.exports = {
           "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
-       
+
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -35,8 +35,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/logoImg.png`, // This path is relative to the root of the site.
       },

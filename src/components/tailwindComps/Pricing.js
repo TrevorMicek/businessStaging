@@ -3,35 +3,17 @@ import { Link } from 'gatsby'
 import Confirm from './Confirmation'
 import { CheckIcon, XIcon } from '@heroicons/react/solid'
 
+//<p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-base')}>{plan.description}</p>
 //Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
 const ecommercePlans = [
   {
-    title: 'Budget',
+    title: 'Full Ecommerce',
     featured: false,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 210,
-    priceYearly: '2,520',
-    savings: 420,
-    pages: 4,
-    link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
-    yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
-    mainFeatures: [
-      { id: 1, value: 'Start selling online NOW' },
-      { id: 2, value: 'Fits all business info' },
-      { id: 3, value: 'Link all your assets' },
-      { id: 4, value: 'Partial ecommerce solution' },
-      { id: 5, value: 'Secures sensitive data' },
-      { id: 6, value: 'Buy buttons instead of cart' },
-    ],
-  },
-  {
-    title: 'Standard',
-    featured: true,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 330,
-    priceYearly: '3,299',
-    savings: 660,
-    pages: 6,
+    priceMonthly: 240,
+    priceYearly: '2,400',
+    savings: 480,
+    pages: 5,
     link: 'https://buy.stripe.com/6oE28Agye1q831628j',
     yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
     mainFeatures: [
@@ -49,12 +31,50 @@ const ecommercePlans = [
   },
   {
     title: 'Standard',
+    featured: true,
+    description: 'Convenient features to take your business to the next level.',
+    priceMonthly: 180,
+    priceYearly: '1,800',
+    savings: 360,
+    pages: 4,
+    link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
+    yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
+    mainFeatures: [
+      { id: 1, value: 'Start selling online NOW' },
+      { id: 2, value: 'Fits all business info' },
+      { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Buy buttons instead of cart' },
+    ],
+  },
+  {
+    title: 'Budget',
+    featured: false,
+    description: 'Convenient features to take your business to the next level.',
+    priceMonthly: 210,
+    priceYearly: '2,100',
+    savings: 420,
+    pages: 3,
+    link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
+    yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
+    mainFeatures: [
+      { id: 1, value: 'Start selling online NOW' },
+      { id: 2, value: 'Fits all business info' },
+      { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Buy buttons instead of cart' },
+    ],
+  },
+  {
+    title: 'Starter',
     featured: false,
     description: 'The best financial services for your thriving business.',
-    priceMonthly: 475,
-    priceYearly: '5,700',
-    savings: 950,
-    pages: 6,
+    priceMonthly: 60,
+    priceYearly: '600',
+    savings: 120,
+    pages: 2,
     link: 'https://buy.stripe.com/6oE28Agye1q831628j',
     yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
     mainFeatures: [
@@ -75,12 +95,51 @@ const ecommercePlans = [
 
 const standardPlans = [
   {
+    title: 'Full Website',
+    featured: false,
+    description: 'The best financial services for your thriving business.',
+    priceMonthly: 180,
+    priceYearly: '1,800',
+    savings: 360,
+    pages: 5,
+    link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
+    yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
+    mainFeatures: [
+      { id: 1, value: 'Better leads & conversions' },
+      { id: 2, value: 'Sell services directly on site' },
+      { id: 3, value: 'Customers easily find you' },
+      { id: 4, value: 'Fits all business info' },
+      { id: 5, value: 'Full website solution' },
+      { id: 6, value: 'Easily scalable' },
+      { id: 7, value: 'Centralized business info' },
+    ],
+  },
+  {
+    title: 'Standard',
+    featured: true,
+    description: 'Convenient features to take your business to the next level.',
+    priceMonthly: 135,
+    priceYearly: '1,350',
+    savings: 270,
+    link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
+    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
+    pages: 4,
+    mainFeatures: [
+      { id: 1, value: 'Start your online presence' },
+      { id: 2, value: 'Full website solution'},
+      { id: 3, value: 'Fits all business info' },
+      { id: 4, value: 'Link all your assets' },
+      { id: 5, value: 'Easily scalable' },
+      { id: 6, value: 'Centralized business info' },
+    ],
+  },
+  {
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 115,
-    priceYearly: '1,380',
-    savings: 230,
+    priceMonthly: 90,
+    priceYearly: '180',
+    savings: 270,
     link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
     yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
     pages: 3,
@@ -94,45 +153,26 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Standard',
-    featured: true,
-    description: 'The best financial services for your thriving business.',
-    priceMonthly: 179,
-    priceYearly: '1,889',
-    savings: 378,
-    pages: 5,
-    link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
-    yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
+    title: 'Starter',
+    featured: false,
+    description: 'Convenient features to take your business to the next level.',
+    priceMonthly: 49,
+    priceYearly: '490',
+    savings: 98,
+    link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
+    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
+    pages: 2,
     mainFeatures: [
-      { id: 1, value: 'Better leads & conversions' },
-      { id: 2, value: 'Sell services directly on site' },
-      { id: 3, value: 'Customers easily find you' },
-      { id: 4, value: 'Fits all business info' },
-      { id: 5, value: 'Full website solution' },
-      { id: 6, value: 'Easily scalable' },
-      { id: 7, value: 'Centralized business info' },
+      { id: 1, value: 'Start your online presence' },
+      { id: 2, value: 'Full website solution'},
+      { id: 3, value: 'Fits all business info' },
+      { id: 4, value: 'Link all your assets' },
+      { id: 5, value: 'Easily scalable' },
+      { id: 6, value: 'Centralized business info' },
     ],
   },
-  {
-    title: 'Standard',
-    featured: false,
-    description: 'The best financial services for your thriving business.',
-    priceMonthly: 265,
-    priceYearly: '3,180',
-    savings: 530,
-    pages: 5,
-    link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
-    yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
-    mainFeatures: [
-      { id: 1, value: 'Better leads & conversions' },
-      { id: 2, value: 'Sell services directly on site' },
-      { id: 3, value: 'Customers easily find you' },
-      { id: 4, value: 'Fits all business info' },
-      { id: 5, value: 'Full website solution' },
-      { id: 6, value: 'Easily scalable' },
-      { id: 7, value: 'Centralized business info' },
-    ],
-  }
+
+
 ]
 
 
@@ -175,7 +215,7 @@ export default function Pricing() {
                   'text-sm font-semibold uppercase tracking-wide'
                 )}
               >
-                {plan.title} {plan.title === 'Standard' && plan.featured === false ? <span className="lowercase">- you own the code</span> : ''} <br />{plan.pages} pages
+                {plan.title}{plan.title === 'Standard' && plan.featured === true && plan.pages === 4 ? <span className="">-RECOMMENDED</span> : ''} <br />{plan.pages} pages
               </h3>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
                 <div className="mt-3 flex items-center">
@@ -196,7 +236,7 @@ export default function Pricing() {
                       : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
                     </p>
                     <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-                      {plan.title === 'Standard' && plan.featured === false ? "4-year Contract" : "Yearly Contracts"}
+                    Yearly Contracts
                     </p>
                   </div>
                 </div>
@@ -274,7 +314,9 @@ export default function Pricing() {
             'text-sm font-semibold uppercase tracking-wide'
           )}
         >
-          {plan.title} {plan.title === 'Standard' && plan.featured === false ? <span className="lowercase">- you own the code</span> : ''} <br />{plan.pages} pages
+          {plan.title}
+
+
         </h3>
         <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
           <div className="mt-3 flex items-center">
@@ -294,10 +336,13 @@ export default function Pricing() {
                       : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
               </p>
               <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-              {plan.title === 'Standard' && plan.featured === false ? "4-year Contract" : "Yearly Contracts"}
+              Yearly Contracts
               </p>
+
             </div>
+
           </div>
+
                <a
                   href={plan.link ? plan.link : null}
                   onClick={!plan.link ? () => setConfirm(true) : null}
@@ -314,6 +359,7 @@ export default function Pricing() {
 
         </div>
       </div>
+
       <h4 className="sr-only">Features</h4>
       <ul
         role="list"
@@ -366,7 +412,8 @@ export default function Pricing() {
             <span className="block lg:inline">all-in-one packages.</span>
           </h1>
           <p className="mt-4 text-xl text-indigo-100">
-            Everything you need, nothing you don't. Pick a plan that best suits your business. Click <Link to="/" className="underline cursor-pointer text-blue-300">here</Link> to create a 100% custom package.
+            Everything you need, nothing you don't.<br />
+            Pick a plan that best suits your business and your budget.
           </p>
 
         </div>
@@ -392,6 +439,7 @@ export default function Pricing() {
             </button>
           </div>
         </div>
+        {standardPlans.featured === false && standardPlans.pages === 5 ? <span className="ml-20 lowercase">Need more pages?</span> : ''}
         <PackageToggle />
 
       </div>
