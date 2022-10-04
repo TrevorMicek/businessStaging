@@ -52,7 +52,7 @@ const ecommercePlans = [
     title: 'Budget',
     featured: false,
     description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 210,
+    priceMonthly: 120,
     priceYearly: '2,100',
     savings: 420,
     pages: 3,
@@ -193,6 +193,7 @@ export default function Pricing() {
     {
       packages === 'ecom' ?
       <div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
+
       {/* Decorative background */}
       <div
         aria-hidden="true"
@@ -292,6 +293,7 @@ export default function Pricing() {
     </div> :
 
 <div className="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0">
+
 {/* Decorative background */}
 <div
   aria-hidden="true"
@@ -299,6 +301,7 @@ export default function Pricing() {
 />
 {confirm ? <Confirm confirm={() => setConfirm(false)} /> : null}
 <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
+
   {standardPlans.map((plan) => (
     <div
       key={plan.title}
@@ -314,10 +317,13 @@ export default function Pricing() {
             'text-sm font-semibold uppercase tracking-wide'
           )}
         >
-          {plan.title}
+          {plan.title}<br />{plan.pages} pages
 
-
+          {plan.title === "Full Website" ?
+          <span className=" lowercase text-white flex justify-end -top-12 absolute z-20 ">Need more pages?</span>
+           : <></> }
         </h3>
+
         <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
           <div className="mt-3 flex items-center">
             <p
@@ -422,6 +428,7 @@ export default function Pricing() {
 
         {/* Toggle */}
         <div className="relative mt-12 flex justify-center sm:mt-16">
+
           <div className="bg-indigo-700 p-0.5 rounded-lg flex">
             <button
               type="button"
@@ -439,7 +446,7 @@ export default function Pricing() {
             </button>
           </div>
         </div>
-        {standardPlans.featured === false && standardPlans.pages === 5 ? <span className="ml-20 lowercase">Need more pages?</span> : ''}
+
         <PackageToggle />
 
       </div>
