@@ -6,7 +6,7 @@ import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBolt
 import img from '../../images/movingCurve.jpg'
 const benefits = [
   {
-    name: '100% Hand Coded',
+    name: '100% Custom Solution',
     description:
     "All of our sites are made from scratch using our own code. This allows us full control over the design and functionality, leading to more traffic and conversions.",
     icon: CodeIcon,
@@ -18,9 +18,9 @@ const benefits = [
     icon: LightningBoltIcon,
   },
   {
-    name: 'Subscription Pricing',
+    name: 'Affordable Pricing',
     description:
-      "We use a unique subscription pricing model, so you enjoy no upfront costs, affordable packages and no hidden fees.",
+      "We use a unique pricing model, so you enjoy affordable packages, roughly half the price of others, no monthly maintenance fee & no hidden fees.",
     icon: TagIcon,
   }
 ]
@@ -77,7 +77,7 @@ export default function FeatureSection() {
           </p>
           <p className="mt-4 relative z-10 max-w-2xl text-xl text-gray-600 lg:mx-auto">
           We are changing how small business web design and development is being done
-          with our hand coded websites that we offer as an affordable subscription to businesses like you.
+          with our hand coded websites that we offer as an affordable package that includes all your website needs for businesses like you.
           </p>
         </div>
 

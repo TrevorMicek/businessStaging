@@ -25,7 +25,7 @@ export default function ProductBenefit() {
           <div className="mt-4 text-lg text-gray-600">
           <p className="-mb-2">Speed: 2x-4x faster than page builders, leading to more traffic and conversions</p><br />
 
-          <p className=" -mb-2">Cost: A simple monthly subscription for a fraction of the cost of other developers</p><br />
+          <p className=" -mb-2">Cost: Simple 50% upfront pricing for half of the cost of other developers</p><br />
 
         </div>
         </div>

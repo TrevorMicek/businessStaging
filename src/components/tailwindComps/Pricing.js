@@ -7,55 +7,12 @@ import { CheckIcon, XIcon } from '@heroicons/react/solid'
 //Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
 const ecommercePlans = [
   {
-    title: 'Full Ecommerce',
+    title: 'Budget - Shopify',
     featured: false,
-    description: 'The best financial services for your thriving business.',
-    priceMonthly: 240,
-    priceYearly: '2,400',
-    savings: 480,
-    pages: 5,
-    link: 'https://buy.stripe.com/6oE28Agye1q831628j',
-    yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
-    mainFeatures: [
-      { id: 1, value: 'Revenue directly from site' },
-      { id: 2, value: 'Better leads & conversions' },
-      { id: 3, value: 'Inventory management included' },
-      { id: 4, value: 'Full ecommerce solution' },
-      { id: 5, value: 'Easily scalable' },
-      { id: 6, value: 'Better user experience' },
-      { id: 7, value: 'Secures sensitive data' },
-      { id: 8, value: 'Link all your assets' },
-      { id: 9, value: 'Fits all business info' },
-      { id: 10, value: 'Cart & checkout pages' },
-    ],
-  },
-  {
-    title: 'Standard',
-    featured: true,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 180,
-    priceYearly: '1,800',
-    savings: 360,
-    pages: 4,
-    link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
-    yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
-    mainFeatures: [
-      { id: 1, value: 'Start selling online NOW' },
-      { id: 2, value: 'Fits all business info' },
-      { id: 3, value: 'Link all your assets' },
-      { id: 4, value: 'Partial ecommerce solution' },
-      { id: 5, value: 'Secures sensitive data' },
-      { id: 6, value: 'Buy buttons instead of cart' },
-    ],
-  },
-  {
-    title: 'Budget',
-    featured: false,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 120,
-    priceYearly: '2,100',
+    description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
+    price: '3,000',
     savings: 420,
-    pages: 3,
+    pages: '5+',
     link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
     yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
     mainFeatures: [
@@ -68,13 +25,11 @@ const ecommercePlans = [
     ],
   },
   {
-    title: 'Starter',
-    featured: false,
-    description: 'The best financial services for your thriving business.',
-    priceMonthly: 60,
-    priceYearly: '600',
-    savings: 120,
-    pages: 2,
+    title: 'Standard - Custom Solution',
+    featured: true,
+    description: 'The best ecommerce website for your thriving business; great for established businesses that want a developer on call.',
+    price: '6,000',
+    pages: '5+',
     link: 'https://buy.stripe.com/6oE28Agye1q831628j',
     yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
     mainFeatures: [
@@ -88,6 +43,23 @@ const ecommercePlans = [
       { id: 8, value: 'Link all your assets' },
       { id: 9, value: 'Fits all business info' },
       { id: 10, value: 'Cart & checkout pages' },
+    ],
+  },
+  {
+    title: 'Standard + Eclipse Builder (coming soon)',
+    featured: false,
+    description: 'Same great custom solution, with an easy to use page builder and custom designs.',
+    price: '5,000',
+    pages: '5+',
+    link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
+    yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
+    mainFeatures: [
+      { id: 1, value: 'Start selling online NOW' },
+      { id: 2, value: 'Fits all business info' },
+      { id: 3, value: 'Link all your assets' },
+      { id: 4, value: 'Partial ecommerce solution' },
+      { id: 5, value: 'Secures sensitive data' },
+      { id: 6, value: 'Buy buttons instead of cart' },
     ],
   }
 ]
@@ -95,13 +67,28 @@ const ecommercePlans = [
 
 const standardPlans = [
   {
-    title: 'Full Website',
+    title: 'Budget - WordPress',
     featured: false,
-    description: 'The best financial services for your thriving business.',
-    priceMonthly: 180,
-    priceYearly: '1,800',
-    savings: 360,
-    pages: 5,
+    description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
+    price: '2,000',
+    link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
+    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
+    pages: '5+',
+    mainFeatures: [
+      { id: 1, value: 'Start your online presence' },
+      { id: 2, value: 'Full website solution'},
+      { id: 3, value: 'Fits all business info' },
+      { id: 4, value: 'Link all your assets' },
+      { id: 5, value: 'Easily scalable' },
+      { id: 6, value: 'Centralized business info' },
+    ],
+  },
+  {
+    title: 'Standard - custom solution',
+    featured: true,
+    description: 'The best website for your thriving business; great for established businesses that want a developer on call',
+    price: '4,000',
+    pages: '5+',
     link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
     yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
     mainFeatures: [
@@ -115,34 +102,13 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Standard',
-    featured: true,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 135,
-    priceYearly: '1,350',
-    savings: 270,
-    link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
-    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
-    pages: 4,
-    mainFeatures: [
-      { id: 1, value: 'Start your online presence' },
-      { id: 2, value: 'Full website solution'},
-      { id: 3, value: 'Fits all business info' },
-      { id: 4, value: 'Link all your assets' },
-      { id: 5, value: 'Easily scalable' },
-      { id: 6, value: 'Centralized business info' },
-    ],
-  },
-  {
-    title: 'Budget',
+    title: 'Standard + Eclipse Builder (coming soon)',
     featured: false,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 90,
-    priceYearly: '180',
-    savings: 270,
+    description: 'Same great custom solution, with an easy to use page builder and custom designs.',
+    price: '3,000',
     link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
     yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
-    pages: 3,
+    pages: '5+',
     mainFeatures: [
       { id: 1, value: 'Start your online presence' },
       { id: 2, value: 'Full website solution'},
@@ -151,26 +117,7 @@ const standardPlans = [
       { id: 5, value: 'Easily scalable' },
       { id: 6, value: 'Centralized business info' },
     ],
-  },
-  {
-    title: 'Starter',
-    featured: false,
-    description: 'Convenient features to take your business to the next level.',
-    priceMonthly: 49,
-    priceYearly: '490',
-    savings: 98,
-    link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
-    yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
-    pages: 2,
-    mainFeatures: [
-      { id: 1, value: 'Start your online presence' },
-      { id: 2, value: 'Full website solution'},
-      { id: 3, value: 'Fits all business info' },
-      { id: 4, value: 'Link all your assets' },
-      { id: 5, value: 'Easily scalable' },
-      { id: 6, value: 'Centralized business info' },
-    ],
-  },
+  }
 
 
 ]
@@ -218,27 +165,24 @@ export default function Pricing() {
               >
                 {plan.title}{plan.title === 'Standard' && plan.featured === true && plan.pages === 4 ? <span className="">-RECOMMENDED</span> : ''} <br />{plan.pages} pages
               </h3>
+              <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
+                    {plan.description}
+                    </p>
               <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-                <div className="mt-3 flex items-center">
+                <div className="mt-3 h-24 flex items-start">
                   <p
                     className={classNames(
                       plan.featured ? 'text-indigo-600' : 'text-white',
                       'text-4xl mb-20 font-extrabold tracking-tight'
                     )}
                   >
-                    <span className="mr-1">$</span>{plan.priceMonthly}
+                    <span className="mr-1">$</span>{plan.price}
                   </p>
-                  <div className="ml-4">
+                  <div className="ml-4 mt-4">
                     <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                    / month or <br />
-                    <a href={plan.link} className={classNames(
-                      plan.featured
-                      ? 'underline text-indigo-700 hover:text-indigo-600'
-                      : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
+                    {plan.price === '3,000' ? '(100% upfront)' : '(50% upfront)'}
                     </p>
-                    <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-                    Yearly Contracts
-                    </p>
+
                   </div>
                 </div>
 
@@ -249,7 +193,7 @@ export default function Pricing() {
                     plan.featured
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700'
                       : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+                    'mt-0 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
                   )}
                 >
                   Buy {plan.title}
@@ -324,26 +268,23 @@ export default function Pricing() {
            : <></> }
         </h3>
 
-        <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-          <div className="mt-3 flex items-center">
-            <p
-              className={classNames(
-                plan.featured ? 'text-indigo-600' : 'text-white',
-                'text-4xl mb-20 font-extrabold tracking-tight'
-              )}
-            >
-              ${plan.priceMonthly}
-            </p>
-            <div className="ml-4">
-              <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-              / month or <br /> <a href={plan.link} className={classNames(
-                      plan.featured
-                      ? 'underline text-indigo-700 hover:text-indigo-600'
-                      : 'underline text-gray-300 hover:text-gray-400')}>Buy yearly</a> (save ${plan.savings})
-              </p>
-              <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-              Yearly Contracts
-              </p>
+       <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
+                    {plan.description}
+                    </p>
+              <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
+                <div className="mt-3 h-24 flex items-start">
+                  <p
+                    className={classNames(
+                      plan.featured ? 'text-indigo-600' : 'text-white',
+                      'text-4xl mb-20 font-extrabold tracking-tight'
+                    )}
+                  >
+                    <span className="mr-1">$</span>{plan.price}
+                  </p>
+                  <div className="ml-4 mt-4">
+                    <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
+                    {plan.price === '2,000' ? '(100% upfront)' : '(50% upfront)'}
+                    </p>
 
             </div>
 
@@ -407,6 +348,8 @@ export default function Pricing() {
 
   return (
     <div className="bg-gray-50" style={{gridRow:"span 9", gridColumn: 'span 7'}}>
+
+
       <div className="pb-12 relative bg-indigo-600">
         {/* Overlapping background */}
         <div aria-hidden="true" className="hidden absolute bg-gray-50 w-full h-6" />
