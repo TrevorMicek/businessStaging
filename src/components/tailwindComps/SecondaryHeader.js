@@ -28,6 +28,8 @@ export default function Header(props) {
         return ['Tips & Tricks', 'For a Better Website']
       case 'Contact':
         return ['Contact', 'Websites By Trevor']
+      case 'Portfolio':
+        return ['Checkout out some', 'Websites By Trevor']
       case 'Store':
         return ['Custom', 'Ecommerce Store']
     }

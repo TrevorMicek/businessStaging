@@ -7,7 +7,7 @@ import { CheckIcon, XIcon } from '@heroicons/react/solid'
 //Click <span onClick={() => setConfirm(true)} className="underline cursor-pointer text-blue-300">here</span> to try our free tier.
 const ecommercePlans = [
   {
-    title: 'Budget - Shopify',
+    title: 'Shopify',
     featured: false,
     description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
     price: '3,000',
@@ -25,7 +25,7 @@ const ecommercePlans = [
     ],
   },
   {
-    title: 'Standard - Custom Solution',
+    title: 'Custom Solution',
     featured: true,
     description: 'The best ecommerce website for your thriving business; great for established businesses that want a developer on call.',
     price: '6,000',
@@ -46,7 +46,7 @@ const ecommercePlans = [
     ],
   },
   {
-    title: 'Standard + Eclipse Builder (coming soon)',
+    title: 'Custom Solution + Eclipse Builder',
     featured: false,
     description: 'Same great custom solution, with an easy to use page builder and custom designs.',
     price: '5,000',
@@ -67,7 +67,7 @@ const ecommercePlans = [
 
 const standardPlans = [
   {
-    title: 'Budget - WordPress',
+    title: 'WordPress',
     featured: false,
     description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
     price: '2,000',
@@ -84,7 +84,7 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Standard - custom solution',
+    title: 'Custom Solution',
     featured: true,
     description: 'The best website for your thriving business; great for established businesses that want a developer on call',
     price: '4,000',
@@ -102,7 +102,7 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Standard + Eclipse Builder (coming soon)',
+    title: 'Custom Solution + Eclipse Builder',
     featured: false,
     description: 'Same great custom solution, with an easy to use page builder and custom designs.',
     price: '3,000',
@@ -163,7 +163,7 @@ export default function Pricing() {
                   'text-sm font-semibold uppercase tracking-wide'
                 )}
               >
-                {plan.title}{plan.title === 'Standard' && plan.featured === true && plan.pages === 4 ? <span className="">-RECOMMENDED</span> : ''} <br />{plan.pages} pages
+                {plan.title} {plan.price === '5,000' ? "(coming soon)" : null} <br />{plan.pages} pages
               </h3>
               <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                     {plan.description}
@@ -247,97 +247,89 @@ export default function Pricing() {
 <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">
 
   {standardPlans.map((plan) => (
-    <div
-      key={plan.title}
-      className={classNames(
-        plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
-        'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
-      )}
-    >
-      <div>
-        <h3
-          className={classNames(
-            plan.featured ? 'text-indigo-600' : 'text-white',
-            'text-sm font-semibold uppercase tracking-wide'
-          )}
-        >
-          {plan.title}<br />{plan.pages} pages
-
-          {plan.title === "Full Website" ?
-          <span className=" lowercase text-white flex justify-end -top-12 absolute z-20 ">Need more pages?</span>
-           : <></> }
-        </h3>
-
+     <div
+     key={plan.title}
+     className={classNames(
+       plan.featured ? 'bg-white ring-2 ring-indigo-700 shadow-md' : 'bg-indigo-700 lg:bg-transparent',
+       'pt-6 px-6 pb-3 rounded-lg lg:px-8 lg:pt-12'
+     )}
+   >
+     <div>
+       <h3
+         className={classNames(
+           plan.featured ? 'text-indigo-600' : 'text-white',
+           'text-sm font-semibold uppercase tracking-wide'
+         )}
+       >
+         {plan.title} {plan.price === '5,000' ? "(coming soon)" : null} <br />{plan.pages} pages
+       </h3>
        <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
-                    {plan.description}
-                    </p>
-              <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
-                <div className="mt-3 h-24 flex items-start">
-                  <p
-                    className={classNames(
-                      plan.featured ? 'text-indigo-600' : 'text-white',
-                      'text-4xl mb-20 font-extrabold tracking-tight'
-                    )}
-                  >
-                    <span className="mr-1">$</span>{plan.price}
-                  </p>
-                  <div className="ml-4 mt-4">
-                    <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                    {plan.price === '2,000' ? '(100% upfront)' : '(50% upfront)'}
-                    </p>
+             {plan.description}
+             </p>
+       <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
+         <div className="mt-3 h-24 flex items-start">
+           <p
+             className={classNames(
+               plan.featured ? 'text-indigo-600' : 'text-white',
+               'text-4xl mb-20 font-extrabold tracking-tight'
+             )}
+           >
+             <span className="mr-1">$</span>{plan.price}
+           </p>
+           <div className="ml-4 mt-4">
+             <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
+             {plan.price === '2,000' ? '(100% upfront)' : '(50% upfront)'}
+             </p>
 
-            </div>
+           </div>
+         </div>
 
-          </div>
+         <a
+           href={plan.link ? plan.link : null}
+           onClick={!plan.link ? () => setConfirm(true) : null}
+           className={classNames(
+             plan.featured
+               ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+               : 'bg-white text-indigo-600 hover:bg-indigo-50',
+             'mt-0 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
+           )}
+         >
+           Buy {plan.title}
+         </a>
 
-               <a
-                  href={plan.link ? plan.link : null}
-                  onClick={!plan.link ? () => setConfirm(true) : null}
-                  className={classNames(
-                    plan.featured
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                      : 'bg-white text-indigo-600 hover:bg-indigo-50',
-                    'mt-6 w-full h-10 inline-block whitespace-nowrap py-2 px-10 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full'
-                  )}
-                >
-                  Buy {plan.title}
-                </a>
-
-
-        </div>
-      </div>
-
-      <h4 className="sr-only">Features</h4>
-      <ul
-        role="list"
-        className={classNames(
-          plan.featured
-            ? 'border-gray-200 divide-gray-200'
-            : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
-          'mt-7 border-t divide-y lg:border-t-0'
-        )}
-      >
-        {plan.mainFeatures.map((mainFeature) => (
-          <li key={mainFeature.id} className="py-2 flex items-center">
-            <CheckIcon
-              className={classNames(
-                plan.featured ? 'text-indigo-500' : 'text-indigo-200',
-                'w-5 h-5 flex-shrink-0'
-              )}
-              aria-hidden="true"
-            />
-            <span
-              className={classNames(
-                plan.featured ? 'text-gray-600' : 'text-white',
-                'ml-3 text-sm font-medium'
-              )}
-            >
-              {mainFeature.value}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
+       </div>
+     </div>
+     <h4 className="sr-only">Features</h4>
+     <ul
+       role="list"
+       className={classNames(
+         plan.featured
+           ? 'border-gray-200 divide-gray-200'
+           : 'border-indigo-500 divide-indigo-500 divide-opacity-75',
+         'mt-7 border-t divide-y lg:border-t-0'
+       )}
+     >
+       {plan.mainFeatures.map((mainFeature) => (
+         <li key={mainFeature.id} className="py-2 flex items-center">
+           <CheckIcon
+             className={classNames(
+               plan.featured ? 'text-indigo-500' : 'text-indigo-200',
+               'w-5 h-5 flex-shrink-0'
+             )}
+             aria-hidden="true"
+           />
+           <span
+             className={classNames(
+               plan.featured ? 'text-gray-600' : 'text-white',
+               'ml-3 text-sm font-medium'
+             )}
+           >
+             {mainFeature.value}
+           </span>
+         </li>
+       ))}
+     </ul>
+   </div>
   ))}
 </div>
 </div>

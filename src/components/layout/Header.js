@@ -7,7 +7,7 @@ import SecondaryHeader from '../tailwindComps/SecondaryHeader'
 const Header = (props) => {
 
   const firstTitle = 'Small Business Web Design & Development'
-  const secondaryTitles = ['Product', 'Pricing', 'About', 'Blog', 'Store','Contact']
+  const secondaryTitles = ['Product', 'Pricing', 'Store', 'About', 'Blog', 'Portfolio','Contact']
 
 
   const getSecondaryTitle = (curTitle) => {
