@@ -32,7 +32,7 @@ const portfolio = [
   ]
 export default function Example() {
     return (
-      <div className="relative bg-indigo-50 pt-16 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
+      <div id="portfolio" className="relative bg-indigo-50 pt-16 -mb-8 overflow-hidden sm:pt-24 lg:pt-32" style={{gridColumn:"span 7", gridRowStart:"second", gridRowEnd:"third"}}>
         <div className=" w-screen">
           <div>
 

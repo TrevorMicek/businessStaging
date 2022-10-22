@@ -11,9 +11,9 @@ import Confirm from './Confirmation'
 import Logo from '../../images/logo.png'
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'Portfolio', href: '/portfolio' },
   { name: 'Product', href: '/product' },
   { name: 'Pricing', href: '/pricing' },
-  { name: 'Partnerships', href: 'https://partners.websitesbytrevor.com/' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ]
