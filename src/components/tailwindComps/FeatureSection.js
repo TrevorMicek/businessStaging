@@ -1,10 +1,16 @@
 import React from 'react'
 
-import { CodeIcon, TagIcon, DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { CodeIcon, TagIcon, CreditCardIcon,DatabaseIcon,TerminalIcon, UploadIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
 
 
 import img from '../../images/movingCurve.jpg'
 const benefits = [
+  {
+    name: 'Monthly Cost',
+    description:
+    "Maintenance and edits are all built right into each website package so there's no annoying monthly subscription.",
+    icon: CreditCardIcon,
+  },
   {
     name: '100% Custom Solution',
     description:
@@ -90,7 +96,8 @@ export default function FeatureSection() {
                   <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
                     <benefit.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{benefit.name}</p>
+
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{benefit.name === "Monthly Cost" ? <span>&#216; </span> : null}{benefit.name}</p>
                 </dt>
                 <dd className="mt-2 ml-16 text-base text-gray-600">{benefit.description}</dd>
               </div>

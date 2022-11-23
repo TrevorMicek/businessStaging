@@ -10,7 +10,7 @@ const ecommercePlans = [
     title: 'Shopify',
     featured: false,
     description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
-    price: '3,000',
+    price: '4,000',
     savings: 420,
     pages: '5+',
     link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
@@ -28,7 +28,7 @@ const ecommercePlans = [
     title: 'Custom Solution',
     featured: true,
     description: 'The best ecommerce website for your thriving business; great for established businesses that want a developer on call.',
-    price: '6,000',
+    price: '7,000',
     pages: '5+',
     link: 'https://buy.stripe.com/6oE28Agye1q831628j',
     yearLink: 'https://buy.stripe.com/bIY8wYchY5Go59e9AQ',
@@ -46,11 +46,11 @@ const ecommercePlans = [
     ],
   },
   {
-    title: 'Custom Solution + Eclipse Builder',
+    title: 'Custom Solution + Marketing Stategy',
     featured: false,
-    description: 'Same great custom solution, with an easy to use page builder and custom designs.',
-    price: '5,000',
-    pages: '5+',
+    description: 'Same great custom solution with a full marketing plan including email, social media, SEO, and Google/FB Ads.',
+    price: '12,000',
+    pages: '10+',
     link: 'https://buy.stripe.com/6oE4gI95M3yg1X26oG',
     yearLink: 'https://buy.stripe.com/bIYcNe81I1q8bxC3cv',
     mainFeatures: [
@@ -70,7 +70,7 @@ const standardPlans = [
     title: 'WordPress',
     featured: false,
     description: 'Convenient features to make a simple website quickly; great for new businesses on a budget.',
-    price: '2,000',
+    price: '3,000',
     link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
     yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
     pages: '5+',
@@ -86,8 +86,8 @@ const standardPlans = [
   {
     title: 'Custom Solution',
     featured: true,
-    description: 'The best website for your thriving business; great for established businesses that want a developer on call',
-    price: '4,000',
+    description: 'The best website for your thriving business; great for established businesses that want a developer in house',
+    price: '5,000',
     pages: '5+',
     link: 'https://buy.stripe.com/aEUbJaa9Q3yg3164gm',
     yearLink: 'https://buy.stripe.com/dR68wYa9Q8SAgRWdR2',
@@ -102,10 +102,10 @@ const standardPlans = [
     ],
   },
   {
-    title: 'Custom Solution + Eclipse Builder',
+    title: 'Custom Solution + Marketing Strategy',
     featured: false,
-    description: 'Same great custom solution, with an easy to use page builder and custom designs.',
-    price: '3,000',
+    description: 'Same great custom solution with a full marketing plan including email, social media, SEO, and Google/FB Ads.',
+    price: '8,000',
     link: 'https://buy.stripe.com/28o00s0zgfgYatyeV2',
     yearLink: 'https://buy.stripe.com/fZeaF6eq65Go8lq28l',
     pages: '5+',
@@ -163,7 +163,7 @@ export default function Pricing() {
                   'text-sm font-semibold uppercase tracking-wide'
                 )}
               >
-                {plan.title} {plan.price === '5,000' ? "(coming soon)" : null} <br />{plan.pages} pages
+                {plan.title} {plan.title === "Custom Solution" ? "- Most Popular" : null}<br />{plan.pages} pages
               </h3>
               <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
                     {plan.description}
@@ -180,7 +180,7 @@ export default function Pricing() {
                   </p>
                   <div className="ml-4 mt-4">
                     <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-                    {plan.price === '3,000' ? '(100% upfront)' : '(50% upfront)'}
+                    {plan.price === '4,000' ? '(100% upfront)' : '(50% upfront)'}
                     </p>
 
                   </div>
@@ -261,7 +261,7 @@ export default function Pricing() {
            'text-sm font-semibold uppercase tracking-wide'
          )}
        >
-         {plan.title} {plan.price === '5,000' ? "(coming soon)" : null} <br />{plan.pages} pages
+         {plan.title}  <br />{plan.pages} pages
        </h3>
        <p className={classNames(plan.featured ? 'text-gray-500' : 'text-indigo-200', 'text-sm')}>
              {plan.description}
@@ -278,7 +278,7 @@ export default function Pricing() {
            </p>
            <div className="ml-4 mt-4">
              <p className={classNames(plan.featured ? 'text-gray-700' : 'text-white', 'text-sm')}>
-             {plan.price === '2,000' ? '(100% upfront)' : '(50% upfront)'}
+             {plan.price === '3,000' ? '(100% upfront)' : '(50% upfront)'}
              </p>
 
            </div>
