@@ -14,7 +14,7 @@ const portfolio = [
         name: 'Competitive Intelligence & Analytics',
         description:
           "This Colorado marketer is now able to  offer services directly through their website, increasing their reach and sales.",
-        desktop: earth,
+        desktop: marketDesktop,
         mobile: marketMobile,
         link: 'https://www.getmarketintel.com/'
       },

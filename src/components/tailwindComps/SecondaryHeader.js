@@ -138,7 +138,7 @@ export default function Header(props) {
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
               <span className="block xl:inline">{props.title ? Title()[0] : ''}</span>{' '}
-              <span className="block mx-auto w-max bg-bg text-indigo-500 xl:inline">{props.title ? Title()[1] : ''}</span>
+              <span className="block mx-auto w-max bg-bg text-default xl:inline">{props.title ? Title()[1] : ''}</span>
             </h1>
             <p className="mt-3 max-w-sm bg-bg mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl ">
               {props.text}

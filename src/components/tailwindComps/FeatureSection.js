@@ -93,7 +93,7 @@ export default function FeatureSection() {
             {benefits.map((benefit) => (
               <div key={benefit.name} className="relative">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-grn text-white">
                     <benefit.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
 
